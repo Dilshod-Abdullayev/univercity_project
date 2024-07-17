@@ -1,0 +1,11 @@
+@import '../abstracts/mixins';
+
+nav {
+    width: 100%;
+    height: auto;
+    @include flex-between-center;
+
+    ul {
+        @include flex-between-center;
+    }
+}
