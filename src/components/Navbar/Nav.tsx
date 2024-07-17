@@ -1,4 +1,3 @@
-import React from 'react'
 import Items from './Items'
 import Logo from './Logo'
 import NavSocials from './NavSocials'
@@ -7,12 +6,12 @@ import Application from './Application'
 
 export default function Nav() {
     return (
-        <div className='nav'>
+        <nav className='nav'>
             <Logo />
             <NavSocials />
             <Items />
             <Language />
             <Application />
-        </div>
+        </nav>
     )
 }

@@ -1,6 +1,6 @@
 export default function Language() {
   return (
-    <div>
+    <div className="language">
       UZ
     </div>
   )
