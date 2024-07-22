@@ -1,0 +1,38 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mini_title {
+    @include flex-center-column;
+
+    h2 {
+        width: 300px;
+        text-align: center;
+        font-size: $paragraph-size;
+        color: $paragraph-color;
+    }
+
+    h1 {
+        color: $brand-color;
+        font-weight: $title-weight;
+    }
+}
+
+.education__box {
+    width: 300px;
+    height: 300px;
+    @include flex-center-column;
+
+    p {
+        margin-top: 10px;
+        text-align: center;
+        width: 80%;
+        font-size: $paragraph-size;
+        color: $paragraph-color;
+    }
+}
+
+.education__boxs {
+    width: 100%;
+    @include flex-between-center;
+    gap: 20px;
+}
