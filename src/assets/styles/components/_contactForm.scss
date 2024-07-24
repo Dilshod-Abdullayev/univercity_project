@@ -1,0 +1,74 @@
+.contact {
+    margin-top: 50px;
+    @include flex-around-center;
+
+    img {
+        width: 450px;
+    }
+}
+
+.contactForm {
+    width: 500px;
+    height: 423px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    @include flex-center-column;
+    -webkit-box-shadow: 10px 10px 16px 4px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 10px 10px 16px 4px rgba(34, 60, 80, 0.2);
+    box-shadow: 10px 10px 16px 4px rgba(34, 60, 80, 0.2);
+
+    form {
+        @include flex-center-column;
+        width: 80%;
+
+        div {
+            margin-top: 10px;
+            height: 50px;
+            width: 100%;
+            @include flex-between-center;
+            align-items: center;
+        }
+    }
+
+    h1 {
+        color: $black-color;
+        font-size: $title-second-size;
+        font-weight: $title-weight;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    p {
+        color: $paragraph-color;
+        font-size: $paragraph-size;
+        font-weight: $paragraph-weight;
+        text-align: center;
+    }
+
+    svg {
+        color: #BED8E8;
+    }
+
+    input {
+        padding: 5px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid $black-color;
+        font-size: $paragraph-size;
+        outline: none;
+        border: none;
+        color: $black-color;
+    }
+
+    input:focus {
+        border: 1px solid $brand-color;
+        transition: 0.5s;
+    }
+
+    input::placeholder {
+        color: $black-color;
+        color: #BED8E8;
+    }
+}

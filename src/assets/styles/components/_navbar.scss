@@ -1,7 +1,7 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-nav {
+.nav {
     @include flex-between-center;
 }
 
@@ -10,7 +10,7 @@ ul {
     gap: 40px;
 }
 
-nav li {
+.nav li {
     list-style: none;
 
     a {
@@ -53,8 +53,6 @@ nav li {
     color: $brand-color;
 }
 
-
-
 .contact-btn {
     margin-top: 10px;
     display: inline-flex;
@@ -82,20 +80,35 @@ nav li {
     margin-top: 50px;
     width: 100%;
     height: 550px;
-    @include bgHeader; 
-    h1{
+    @include bgHeader;
+
+    h1 {
         width: 43%;
         font-size: $title-size;
         color: $black-color;
-        span{
+
+        span {
             color: $brand-color;
         }
     }
-    p{
+
+    p {
         margin-top: 10px;
         width: 38%;
         font-size: $paragraph-size;
         color: $paragraph-color;
         line-height: $paragraph-height;
+    }
+}
+
+footer {
+    padding:40px 0;
+
+    .nav-social {
+        gap: 20px;
+
+        svg {
+            font-size: $title-second-size;
+        }
     }
 }

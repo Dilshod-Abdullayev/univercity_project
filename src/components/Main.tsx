@@ -1,4 +1,6 @@
+import Contact from "./Contact/Contact";
 import Education from "./education/Education";
+import FAQ from "./FAQ";
 import Header from "./Header/Header";
 import Univercity from "./univercity/Univercity";
 
@@ -7,7 +9,9 @@ export default function Main() {
     <div>
       <Header />
       <Education />
-      <Univercity/>
+      <Univercity />
+      <FAQ />
+      <Contact/>
     </div>
   )
 }
