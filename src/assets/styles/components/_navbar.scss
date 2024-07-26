@@ -2,113 +2,289 @@
 @import '../abstracts/mixins';
 
 .nav {
-    @include flex-between-center;
+  @include flex-between-center;
+  padding: 1rem;
+  background-color: #f8f8f8;
 }
 
 ul {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .nav li {
-    list-style: none;
+  list-style: none;
 
-    a {
-        text-decoration: none;
-        font-size: $paragraph-size;
-        font-weight: $paragraph-weight;
-        line-height: $list-height;
-        padding-bottom: 5px;
-        color: $paragraph-color;
+  a {
+    text-decoration: none;
+    font-size: $paragraph-size;
+    font-weight: $paragraph-weight;
+    line-height: $list-height;
+    padding-bottom: 5px;
+    color: $paragraph-color;
 
-        &:hover {
-            transition: 0.5s;
-            color: $brand-color;
-            cursor: pointer;
-            text-decoration: underline;
-        }
+    &:hover {
+      transition: 0.5s;
+      color: $brand-color;
+      cursor: pointer;
+      text-decoration: underline;
     }
+  }
 }
 
 .nav-social {
-    display: flex;
-    gap: 10px;
-    font-size: $paragraph-size;
-    color: $brand-color;
+  display: flex;
+  gap: 10px;
+  font-size: $paragraph-size;
+  color: $brand-color;
 
-    svg:hover {
-        cursor: pointer;
-    }
+  svg:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 }
 
 .language {
-    cursor: pointer;
-    font-size: $paragraph-size;
-    font-weight: $title-weight;
-    line-height: $list-height;
-    color: $brand-color;
+  cursor: pointer;
+  font-size: $paragraph-size;
+  font-weight: $title-weight;
+  line-height: $list-height;
+  color: $brand-color;
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 }
 
 .icon {
-    color: $brand-color;
+  color: $brand-color;
 }
 
 .contact-btn {
-    margin-top: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border: none;
-    background-color: $brand-color;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 15px;
-    cursor: pointer;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  background-color: $brand-color;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
 
-    svg {
-        margin-right: 10px;
-    }
+  svg {
+    margin-right: 10px;
+  }
 
-    &:hover {
-        transition: 0.5s;
-        background-color: rgb(141, 214, 255);
-    }
+  &:hover {
+    transition: 0.5s;
+    background-color: rgb(141, 214, 255);
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 }
 
 .header {
-    margin-top: 50px;
-    width: 100%;
-    height: 550px;
-    @include bgHeader;
+  margin-top: 50px;
+  width: 100%;
+  height: 550px;
+  @include bgHeader;
 
-    h1 {
-        width: 43%;
-        font-size: $title-size;
-        color: $black-color;
+  @media (max-width: 768px) {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-        span {
-            color: $brand-color;
-        }
+  h1 {
+    width: 43%;
+    font-size: $title-size;
+    color: $black-color;
+
+    span {
+      color: $brand-color;
     }
 
-    p {
-        margin-top: 10px;
-        width: 38%;
-        font-size: $paragraph-size;
-        color: $paragraph-color;
-        line-height: $paragraph-height;
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
     }
+  }
+
+  p {
+    margin-top: 10px;
+    width: 38%;
+    font-size: $paragraph-size;
+    color: $paragraph-color;
+    line-height: $paragraph-height;
+
+    @media (max-width: 768px) {
+      width: 100%;  
+      text-align: center;
+    }
+  }
+
 }
 
 footer {
-    padding:40px 0;
+  padding: 40px 0;
+
+  .nav-social {
+    gap: 20px;
+
+    svg {
+      font-size: $title-second-size;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav ul {
+    gap: 15px;
+  }
+}
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  position: relative;
+  z-index: 1000;
+
+  .nav-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: $brand-color;
+    }
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color: rgba(248, 248, 248, 0.95);
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  .desktop-nav-items {
+    display: none;
+
+    @media (min-width: 769px) {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 2rem;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          font-size: $paragraph-size;
+          font-weight: $paragraph-weight;
+          line-height: $list-height;
+          padding-bottom: 0.5rem;
+          color: $paragraph-color;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            color: $brand-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
 
     .nav-social {
-        gap: 20px;
+      display: flex;
+      gap: 1rem;
+      font-size: $paragraph-size;
+      color: $brand-color;
 
-        svg {
-            font-size: $title-second-size;
-        }
+      svg:hover {
+        cursor: pointer;
+      }
     }
+
+    .language,
+    .application {
+      cursor: pointer;
+      font-size: $paragraph-size;
+      font-weight: $title-weight;
+      line-height: $list-height;
+      color: $brand-color;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+
+.content {
+  transition: opacity 0.3s ease-in-out;
+
+  &.blur {
+    opacity: 0.5;
+  }
 }

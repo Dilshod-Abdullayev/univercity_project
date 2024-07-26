@@ -1,4 +1,3 @@
-import Application from "../Navbar/Application";
 import Items from "../Navbar/Items";
 import Logo from "../Navbar/Logo";
 import NavSocials from "../Navbar/NavSocials";
