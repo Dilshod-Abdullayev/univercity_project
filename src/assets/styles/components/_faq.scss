@@ -12,12 +12,21 @@
 .faq_box_drop {
     width: 45%;
 
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
     p {
         display: none;
         width: 50%;
         margin-top: 10px;
         font-size: $paragraph-size;
         color: $paragraph-color;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
     }
 
     &.active {

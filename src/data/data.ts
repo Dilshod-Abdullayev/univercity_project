@@ -8,29 +8,29 @@ export const navItems: navItem[] = [
     }, {
         id: 2,
         text: 'О нас',
-        path: '/'
+        path: '/about'
     }
     , {
         id: 3,
         text: 'Услуги',
-        path: '/'
+        path: '/servise'
     },
     {
         id: 4,
         text: 'Университеты',
-        path: '/'
+        path: '/univercity'
     }, {
         id: 5,
         text: 'Студенты',
-        path: '/'
+        path: '/students'
     }
     , {
         id: 6,
         text: 'Новости',
-        path: '/'
+        path: '/news'
     }, {
         id: 7,
         text: 'Контакты',
-        path: '/'
+        path: '/contact'
     }
 ]

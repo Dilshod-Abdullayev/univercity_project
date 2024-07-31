@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
 @mixin flex-around-center {
   display: flex;
   justify-content: space-around;
@@ -17,6 +18,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 @mixin bgHeader {
   background-image: url('../../images/header_bg.png');
   background-size: cover;

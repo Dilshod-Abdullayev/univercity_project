@@ -7,14 +7,14 @@ import NavSocials from './NavSocials';
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef();
+  const navRef = useRef<HTMLDivElement>(null); // Specify the type here
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event) => {
-    if (navRef.current && !navRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
       setIsOpen(false);
     }
   };

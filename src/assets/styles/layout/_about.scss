@@ -1,0 +1,71 @@
+.about_page {
+    margin-top: 50px;
+
+    h1 {
+        text-align: center;
+        color: $brand-color;
+        font-size: $title-size;
+        font-weight: $title-weight;
+    }
+
+    .about {
+        @include flex-around-center;
+        width: 100%;
+
+        p {
+            color: $paragraph-color;
+            font-size: $paragraph-size;
+            margin-top: 20px;
+
+            @media (max-width:768px) {
+                width: 100%;
+                font-size: $list-size;
+            }
+        }
+
+        @media (max-width:1118px) {
+            img {
+                width: 100%;
+            }
+        }
+
+        div {
+            width: 45%;
+
+            @media (max-width:1118px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.about_servise {
+    margin-top: 50px;
+
+    p {
+        text-align: center;
+        color: $paragraph-color;
+        font-size: $paragraph-size;
+        margin-top: 20px;
+    }
+
+    .about_servise_boxs {
+        @include flex-between-center;
+        margin-top: 30px;
+        gap: 20px;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+    }
+
+    .about_servise_box {
+        width: 350px;
+        @include flex-center-column;
+        @media (max-width:468px) {
+            border: 1px solid $brand-color;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+}

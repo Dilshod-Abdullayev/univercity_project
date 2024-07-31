@@ -120,6 +120,7 @@ ul {
 
     @media (max-width: 768px) {
       width: 100%;
+      font-size: $title-second-size;
       text-align: center;
     }
   }
@@ -229,23 +230,23 @@ footer {
       display: flex;
       gap: 2rem;
 
-      li {
-        list-style: none;
+        li {
+          list-style: none;
 
-        a {
-          text-decoration: none;
-          font-size: $paragraph-size;
-          font-weight: $paragraph-weight;
-          line-height: $list-height;
-          padding-bottom: 0.5rem;
-          color: $paragraph-color;
-          transition: 0.3s ease-in-out;
+          a {
+            text-decoration: none;
+            font-size: $paragraph-size;
+            font-weight: $paragraph-weight;
+            line-height: $list-height;
+            padding-bottom: 0.5rem;
+            color: $paragraph-color;
+            transition: 0.3s ease-in-out;
 
-          &:hover {
-            color: $brand-color;
-            text-decoration: underline;
+            &:hover {
+              color: $brand-color;
+              text-decoration: underline;
+            }
           }
-        }
       }
     }
 
